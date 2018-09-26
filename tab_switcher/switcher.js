@@ -50,9 +50,11 @@ function updateVisibleTabs(query, preserveSelectedTabIndex) {
 							)
 						: null
 				),
-				$('<td></td>').text(tab.title),
-				$('<td></td>').text(tab.url),
-			)
+				$('<td></td>').text(tab.title).css({padding: '10px'})
+				// $('<td></td>').text(tab.url),
+            )
+            .attr({'height': '30px'})
+            .css({padding: '10px'})
 			.data('index', tabIndex)
 			.data('tabId', tab.id)
 			.on('click', () => setSelectedString(tabIndex))
